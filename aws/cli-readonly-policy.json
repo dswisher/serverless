@@ -4,6 +4,7 @@
         {
             "Effect": "Allow",
             "Action": [
+                "s3:GetBucketWebsite",
                 "s3:ListAllMyBuckets"
             ],
             "Resource": [

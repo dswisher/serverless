@@ -4,9 +4,18 @@
 
     aws cloudformation list-stacks
 
+    aws cloudformation validate-template \
+        --template-body file://stack.yaml
+
     aws cloudformation create-stack \
-        --stack-name dss-serverless
+        --stack-name dss-serverless \
         --template-body file://stack.yaml \
+        --profile dss-admin
+
+    aws cloudformation create-stack \
+        --stack-name dss-serverless \
+        --template-body file://stack.yaml \
+        --parameters ParameterKey=BucketName,ParameterValue=dss-serverless \
         --profile dss-admin
 
     aws cloudformation delete-stack \
@@ -16,7 +25,14 @@
 
 ### S3
 
+    aws s3 sync . s3://dss-serverless --profile dss-admin
+
+
+### S3 API
+
     aws s3api list-buckets
+
+    aws s3api get-bucket-website --bucket dss-serverless
 
 
 ### IAM

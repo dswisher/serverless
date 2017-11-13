@@ -24,5 +24,9 @@ web application using AWS tools.
 ## AWS Documentation
 
 * AWS CLI - [reference](http://docs.aws.amazon.com/cli/latest/reference/index.html#cli-aws)
+* CloudFormation
+  * [Parameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html)
 * IAM - [access](http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-controlling-access-to.html)
+* S3
+  * [Hosting](http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html) a static web site
 
