@@ -2,6 +2,9 @@
 
 ### CloudFormation
 
+Note that a stack with non-empty S3 buckets cannot be deleted.
+All bucket content must be deleted first.
+
     aws cloudformation list-stacks
 
     aws cloudformation validate-template \
