@@ -75,6 +75,33 @@ var readyPromise = new Promise(resolve => {
 
 console.log('> Starting dev server...')
 
-// TODO
+devMiddleware.waitUntilValid(() => {
+    console.log('> Listening at ' + uri + '\n')
+    // when env is testing, don't need open it
+    if (autoOpenBrowser && process.env.NODE_ENV !== 'testing') {
+        opn(uri)
+    }
+    _resolve()
+})
 
+var redirect = express()
+redirect.get('*', function(req, res){ 
+    res.redirect('https://localhost:8443' + req.url)
+})
+redirect.listen(port);
+
+var httpsServer = https.createServer({
+    key: fs.readFileSync('build/certs/localhost.key'),
+    cert: fs.readFileSync('build/certs/localhost.crt'),
+    requestCert: false,
+    rejectUnauthorized: false,
+},app).listen(8443);
+
+module.exports = {
+    ready: readyPromise,
+    close: () => {
+        httpServer.close()
+        httpsServer.close()
+    }
+}
 
