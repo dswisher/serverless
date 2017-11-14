@@ -15,9 +15,11 @@ web application using AWS tools.
 * **S3 web sites**
   * Cloud formation - samples: [Matthew Andrews](https://github.com/matthew-andrews/s3-static-website-cloudformation)
   * Restricting access by IP - [bucket policy](http://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html#example-bucket-policies-use-case-3)
-* Web dev tools
+* **Web dev tools**
   * npm v. gulp v. bower v. etc. - [SO post](https://stackoverflow.com/questions/35062852/npm-vs-bower-vs-browserify-vs-gulp-vs-grunt-vs-webpack)
   * Why NPM scripts? [css-tricks](https://css-tricks.com/why-npm-scripts/)
+* **Vue**
+  * Samples: [VueChess](https://github.com/gustaYo/vue-chess)
 * **Blog Posts**
   * Reed Dadoune - Automatic static website deployments via AWS and GitHub - [post](https://www.dadoune.com/blog/aws-codepipeline-cloudbuild-static-s3-website/) - [github](https://github.com/ReedD/dadoune.com)
 * **grip** - preview github markdown locally - [github](https://github.com/joeyespo/grip) - just run `grip` in root dir
