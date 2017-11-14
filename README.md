@@ -19,6 +19,8 @@ web application using AWS tools.
   * npm v. gulp v. bower v. etc. - [SO post](https://stackoverflow.com/questions/35062852/npm-vs-bower-vs-browserify-vs-gulp-vs-grunt-vs-webpack)
   * Why NPM scripts? [css-tricks](https://css-tricks.com/why-npm-scripts/)
 * **Vue**
+  * Templates: [webpack](http://vuejs-templates.github.io/webpack/) - [webpack-simple](https://github.com/vuejs-templates/webpack-simple)
+  * Tutorials: DZone Auth [part1](https://dzone.com/articles/vuejs-2-authentication-tutorial-part-1) [part2](https://dzone.com/articles/vuejs-2-authentication-tutorial-part-2) [part3](https://dzone.com/articles/vuejs-2-authentication-tutorial-part-3)
   * Samples: [VueChess](https://github.com/gustaYo/vue-chess)
 * **Blog Posts**
   * Reed Dadoune - Automatic static website deployments via AWS and GitHub - [post](https://www.dadoune.com/blog/aws-codepipeline-cloudbuild-static-s3-website/) - [github](https://github.com/ReedD/dadoune.com)
