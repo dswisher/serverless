@@ -2,3 +2,6 @@ tags
 .DS_Store
 node_modules/
 *.swp
+dist/
+npm-debug.log
+yarn-error.log
