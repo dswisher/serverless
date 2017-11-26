@@ -32,6 +32,7 @@ web application using AWS tools.
 
 ## AWS Documentation
 
+* API Gateway - [with cognito](http://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-integrate-with-cognito.html#apigateway-enable-cognito-user-pool)
 * **CLI** - [installing](http://docs.aws.amazon.com/cli/latest/userguide/installing.html) - [reference](http://docs.aws.amazon.com/cli/latest/reference/index.html#cli-aws)
 * **CloudFormation**
   * [Parameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html)
