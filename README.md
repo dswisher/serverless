@@ -3,7 +3,7 @@
 This is a bit of a playground to experiment with setting up a serverless
 web application using AWS tools.
 
-* [Commands](Commands.md)
+* [Commands](aws/Commands.md)
 
 
 ## Possibly Useful Links
