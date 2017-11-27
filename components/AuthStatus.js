@@ -14,6 +14,20 @@ function getParameterByName(name, url) {
 Vue.component('auth-status', {
     template: templates.AuthStatus,
 
+    methods: {
+        signIn: function() {
+            // TODO - implement signIn
+            console.log("signIn is not yet implemented.");
+            window.location = "/index.html?loggedin=true";
+        },
+
+        signOut: function() {
+            // TODO - implement signOut
+            console.log("signOut is not yet implemented.");
+            window.location = "/index.html?loggedin=false";
+        }
+    },
+
     computed: {
         authorized: function() {
             // TODO - replace this with something real - call to library method

@@ -1,3 +1,11 @@
 
-<p>Authorization Status: <span v-if="!authorized">NOT </span>logged in</p>
+<div class="container is-fluid">
+    <p>Authorization Status: <span v-if="!authorized">NOT </span>logged in</p>
+    <div v-if="authorized">
+        <button v-on:click="signOut" class="button is-primary">Sign Out</button>
+    </div>
+    <div v-if="!authorized">
+        <button v-on:click="signIn" class="button is-primary">Sign In</button>
+    </div>
+</div>
 
