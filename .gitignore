@@ -3,5 +3,6 @@ tags
 node_modules/
 *.swp
 dist/
+tmp/
 npm-debug.log
 yarn-error.log

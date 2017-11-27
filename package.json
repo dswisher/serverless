@@ -17,6 +17,11 @@
   "devDependencies": {
     "del": "^3.0.0",
     "gulp": "^3.9.1",
-    "gulp-webserver": "^0.9.1"
+    "gulp-concat": "^2.6.1",
+    "gulp-file-contents-to-keys": "^2.0.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-webserver": "^0.9.1",
+    "jshint": "^2.9.5"
   }
 }
