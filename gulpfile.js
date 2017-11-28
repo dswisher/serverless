@@ -63,12 +63,19 @@ gulp.task('copy:js', ['compile:js'], function() {
 });
 
 
+gulp.task('copy:icon', function() {
+    return gulp
+        .src('./static/favicon.ico')
+        .pipe(gulp.dest('./dist'));
+});
+
+
 gulp.task('clean', function() {
   return del(['dist', 'tmp']);
 });
 
 
-gulp.task('watch', ['copy:html', 'copy:css', 'copy:js'], function() {
+gulp.task('watch', ['copy:html', 'copy:css', 'copy:js', 'copy:icon'], function() {
     for (key in paths) {
         console.log('Watching: ' + key + ' files...');
         gulp.watch(paths[key], [key])

@@ -33,6 +33,19 @@ function buster() {
     return "rand=" +  Math.floor(Math.random() * 10000);
 }
 
+
+// generateVerification creates a random string for including in the OAuth2
+// request, which is then validated in the response.
+function generateVerification () {
+  var verification = '';
+  var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  for (var i = 0; i < 32; i++) {
+    verification += possible.charAt(Math.floor(Math.random() * possible.length));
+  }
+  return verification;
+}
+
+
 var COOKIE_NAME = "auth-token";
 var TOKEN_VAL = "logged-in";
 
@@ -42,9 +55,24 @@ Vue.component('auth-status', {
 
     methods: {
         signIn: function() {
+            // TODO - for the moment, hijack auth from the sample
+            var domain = 'maddox.auth.eu-west-1.amazoncognito.com';
+            var clientId = '4jcmshlse80ab667okni41fbf5';
+            var type = 'token';
+            var scope = 'openid profile';
+
+            var callback = window.location.protocol + '//' + window.location.host + '/callback';
+
+            // TODO - save this? Read up on CSRF attacks
+            // https://en.wikipedia.org/wiki/Cross-site_request_forgery
+            // http://docs.aws.amazon.com/cognito/latest/developerguide/login-endpoint.html
+            var verification = generateVerification();
+            
+            window.location.href = 'https://' + domain + '/login?response_type=' + type + '&client_id=' + clientId + '&redirect_uri=' + callback + '&state=' + verification + '&scope=' + scope;
+
             // TODO - implement signIn
-            createCookie(COOKIE_NAME, TOKEN_VAL, 7);
-            window.location = "/index.html?" + buster();
+            // createCookie(COOKIE_NAME, TOKEN_VAL, 7);
+            // window.location = "/index.html?" + buster();
         },
 
         signOut: function() {
