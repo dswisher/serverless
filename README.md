@@ -32,6 +32,9 @@ web application using AWS tools.
 
 ## AWS Documentation
 
+* Cognito
+  * Samples - [Auth SDK](https://github.com/aws/amazon-cognito-auth-js)
+  * Docs - [LOGIN endpoint](http://docs.aws.amazon.com/cognito/latest/developerguide/login-endpoint.html)
 * API Gateway - [with cognito](http://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-integrate-with-cognito.html#apigateway-enable-cognito-user-pool)
 * **CLI** - [installing](http://docs.aws.amazon.com/cli/latest/userguide/installing.html) - [reference](http://docs.aws.amazon.com/cli/latest/reference/index.html#cli-aws)
 * **CloudFormation**
