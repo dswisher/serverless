@@ -42,5 +42,5 @@ web application using AWS tools.
 * **IAM** - [access](http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-controlling-access-to.html)
 * **CodePipeline** - [home](https://aws.amazon.com/codepipeline/)
 * **S3**
-  * [Hosting](http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html) a static web site
+  * [Hosting](http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html) a static web site - [virtual hosting](http://docs.aws.amazon.com/AmazonS3/latest/dev/VirtualHosting.html)
 
