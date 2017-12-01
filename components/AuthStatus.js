@@ -55,13 +55,16 @@ Vue.component('auth-status', {
 
     methods: {
         signIn: function() {
-            // TODO - for the moment, hijack auth from the sample
-            var domain = 'maddox.auth.eu-west-1.amazoncognito.com';
-            var clientId = '4jcmshlse80ab667okni41fbf5';
-            var type = 'token';
+            var domain = 'swish-poc1.auth.us-east-1.amazoncognito.com';
+            var clientId = '31k8k95kln8ck1bvcmem2c51n1';
+            var type = 'code';
             var scope = 'openid profile';
+            //var type = 'token';
+            //var scope = 'openid profile';
 
-            var callback = window.location.protocol + '//' + window.location.host + '/callback';
+            // var callback = window.location.protocol + '//' + window.location.host + '/callback';
+            // TODO - HACK - get https working locally
+            var callback = 'https://' + window.location.host + '/callback';
 
             // TODO - save this? Read up on CSRF attacks
             // https://en.wikipedia.org/wiki/Cross-site_request_forgery
