@@ -91,7 +91,9 @@ gulp.task('serve', ['watch'], function() {
     .pipe(webserver({
       directoryListing: false,
       open: false,
-      livereload: true
+      livereload: true,
+      host: 'local.dswisher.xyz',
+      https: true
     }));
 });
 

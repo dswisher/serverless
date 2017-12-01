@@ -58,13 +58,11 @@ Vue.component('auth-status', {
             var domain = 'swish-poc1.auth.us-east-1.amazoncognito.com';
             var clientId = '31k8k95kln8ck1bvcmem2c51n1';
             var type = 'code';
-            var scope = 'openid profile';
             //var type = 'token';
-            //var scope = 'openid profile';
+            var scope = 'openid profile';
 
-            // var callback = window.location.protocol + '//' + window.location.host + '/callback';
-            // TODO - HACK - get https working locally
-            var callback = 'https://' + window.location.host + '/callback';
+            // Note: needs to be https for cognito redirect to work
+            var callback = window.location.protocol + '//' + window.location.host + '/callback';
 
             // TODO - save this? Read up on CSRF attacks
             // https://en.wikipedia.org/wiki/Cross-site_request_forgery
