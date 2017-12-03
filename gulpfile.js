@@ -6,6 +6,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var jshint = require('gulp-jshint');
 var concat = require('gulp-concat');
 var filesToKeys = require('gulp-file-contents-to-keys');
+var fileinclude = require('gulp-file-include');
 
 
 var paths = {
@@ -18,6 +19,10 @@ var paths = {
 gulp.task('copy:html', function() {
     return gulp
         .src(paths['copy:html'])
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: '@root'
+        }))
         // TODO - htmlhint? htmlmin?
         .pipe(gulp.dest('./dist'));
 });
@@ -75,7 +80,11 @@ gulp.task('clean', function() {
 });
 
 
-gulp.task('watch', ['copy:html', 'copy:css', 'copy:js', 'copy:icon'], function() {
+gulp.task('dist', ['copy:html', 'copy:css', 'copy:js', 'copy:icon'], function() {
+});
+
+
+gulp.task('watch', ['dist'], function() {
     for (key in paths) {
         console.log('Watching: ' + key + ' files...');
         gulp.watch(paths[key], [key])
