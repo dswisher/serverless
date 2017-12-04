@@ -12,7 +12,7 @@ var fileinclude = require('gulp-file-include');
 var paths = {
     'copy:html': ['./pages/*.html'],
     'package:templates': ['./templates/*.html'],
-    'compile:js': ['./tmp/templates.js', './components/*.js']
+    'compile:js': ['./scripts/*.js', './tmp/templates.js', './components/*.js']
 }
 
 
