@@ -33,6 +33,7 @@ web application using AWS tools.
 ## AWS Documentation
 
 * Cognito
+  * SDK - [github](https://github.com/aws/amazon-cognito-identity-js/) - [using tokens](http://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-using-tokens-with-identity-providers.html) - [remembering tokens](https://github.com/aws/amazon-cognito-identity-js/issues/271)
   * Samples - [Auth SDK](https://github.com/aws/amazon-cognito-auth-js)
   * Docs - [LOGIN endpoint](http://docs.aws.amazon.com/cognito/latest/developerguide/login-endpoint.html)
   * CSRF - [wikipedia](https://en.wikipedia.org/wiki/Cross-site_request_forgery)
