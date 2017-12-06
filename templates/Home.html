@@ -1,0 +1,23 @@
+
+<div>
+    <div class="container is-fluid">
+        <div class="box">
+            <p>Home!</p>
+        </div>
+
+        <div class="box">
+            <button v-on:click="getPets" class="button is-success">Get Pets</button>
+        </div>
+
+        <div class="box" v-if="errorMessage">
+            <div class="notification is-warning">
+                {{ errorMessage }}
+            </div>
+        </div>
+
+        <div class="box" v-if="pets">
+            <pre>{{ pets }}</pre>
+        </div>
+    </div>
+</div>
+

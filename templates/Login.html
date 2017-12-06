@@ -1,0 +1,31 @@
+
+<div class="container is-fluid">
+    <div class="notification is-info">
+        Need to log in!
+    </div>
+
+    <div class="notification is-warning" v-if="errorMessage">
+        {{ errorMessage }}
+    </div>
+
+    <div class="columns box">
+        <div class="column is-half">
+            <div class="field">
+                <p class="control">
+                    <input class="input" type="text" name="username" placeholder="Username" v-model="username">
+                </p>
+            </div>
+            <div class="field">
+                <p class="control">
+                    <input class="input" type="password" name="password" placeholder="Password" v-model="password">
+                </p>
+            </div>
+            <div class="field">
+                <p class="control">
+                    <button class="button is-success" v-on:click="doLogin">Login</button>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+

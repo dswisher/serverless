@@ -8,11 +8,18 @@ var concat = require('gulp-concat');
 var filesToKeys = require('gulp-file-contents-to-keys');
 var fileinclude = require('gulp-file-include');
 
+var vendorFiles = [
+    './node_modules/vue/dist/vue.js',
+    './node_modules/vue-router/dist/vue-router.js',
+    './node_modules/amazon-cognito-identity-js/dist/aws-cognito-sdk.js',
+    './node_modules/amazon-cognito-identity-js/dist/amazon-cognito-identity.js',
+    './node_modules/axios/dist/axios.js'
+];
 
 var paths = {
-    'copy:html': ['./pages/*.html'],
+    'copy:html': ['./pages/index.html'],
     'package:templates': ['./templates/*.html'],
-    'compile:js': ['./scripts/*.js', './tmp/templates.js', './components/*.js']
+    'compile:js': ['./scripts/*.js', './tmp/templates.js', './components/*.js', './router/router.js']
 }
 
 
@@ -61,8 +68,7 @@ gulp.task('compile:js', ['package:templates'], function() {
 
 gulp.task('copy:js', ['compile:js'], function() {
     return gulp
-        // TODO - pick up more JS files
-        .src('./node_modules/vue/dist/vue.js')
+        .src(vendorFiles)
         // TODO - better place to put vendor JS files?
         .pipe(gulp.dest('./dist/js'));
 });
