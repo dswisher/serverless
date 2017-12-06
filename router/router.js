@@ -37,8 +37,6 @@ var router = new VueRouter({
 
 
 router.beforeEach(function(to, from, next) {
-    console.log('router.beforeEach...');
-
     // Use the page's router title to name the page
     if (to.meta && to.meta.title) {
         document.title = to.meta.title;

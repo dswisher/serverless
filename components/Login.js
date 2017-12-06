@@ -12,6 +12,7 @@ var LoginComponent = Vue.component('login', {
 
     methods: {
         doLogin: function() {
+            var that = this;
             auth.signIn(this.username, this.password, {
                 onSuccess: function (result) {
                     // TODO - how to know where to go back to? For now, go back home

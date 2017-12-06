@@ -108,7 +108,8 @@ gulp.task('serve', ['watch'], function() {
       open: false,
       livereload: true,
       host: 'local.dswisher.xyz',
-      https: true
+      https: true,
+      fallback: 'index.html'
     }));
 });
 
