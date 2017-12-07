@@ -6,7 +6,6 @@ var sourcemaps = require('gulp-sourcemaps');
 var jshint = require('gulp-jshint');
 var concat = require('gulp-concat');
 var filesToKeys = require('gulp-file-contents-to-keys');
-var fileinclude = require('gulp-file-include');
 
 var vendorFiles = [
     './node_modules/vue/dist/vue.js',
@@ -17,7 +16,7 @@ var vendorFiles = [
 ];
 
 var paths = {
-    'copy:html': ['./pages/index.html'],
+    'copy:html': ['./index.html'],
     'package:templates': ['./templates/*.html'],
     'compile:js': ['./scripts/*.js', './tmp/templates.js', './components/*.js', './router/router.js']
 }
@@ -26,10 +25,6 @@ var paths = {
 gulp.task('copy:html', function() {
     return gulp
         .src(paths['copy:html'])
-        .pipe(fileinclude({
-            prefix: '@@',
-            basepath: '@root'
-        }))
         // TODO - htmlhint? htmlmin?
         .pipe(gulp.dest('./dist'));
 });
