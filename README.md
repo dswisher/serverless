@@ -27,6 +27,8 @@ web application using AWS tools.
   * Templates: [webpack](http://vuejs-templates.github.io/webpack/) - [webpack-simple](https://github.com/vuejs-templates/webpack-simple)
   * Tutorials: DZone Auth [part1](https://dzone.com/articles/vuejs-2-authentication-tutorial-part-1) [part2](https://dzone.com/articles/vuejs-2-authentication-tutorial-part-2) [part3](https://dzone.com/articles/vuejs-2-authentication-tutorial-part-3)
   * Samples: [VueChess](https://github.com/gustaYo/vue-chess)
+* **Other Frameworks**
+  * Mithril - [home](https://mithril.js.org/)
 * **Blog Posts**
   * Reed Dadoune - Automatic static website deployments via AWS and GitHub - [post](https://www.dadoune.com/blog/aws-codepipeline-cloudbuild-static-s3-website/) - [github](https://github.com/ReedD/dadoune.com)
 * **grip** - preview github markdown locally - [github](https://github.com/joeyespo/grip) - just run `grip` in root dir
